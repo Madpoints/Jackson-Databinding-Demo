@@ -16,7 +16,7 @@ public class Driver {
 			// read JSON file and map to Java POJO: data/sample-lite.json
 			Student theStudent =
 					mapper.readValue(
-							new File("data/sample-lite.json"), Student.class)
+							new File("data/sample-full.json"), Student.class)
 ;			
 			System.out.println("Name: " + 
 								theStudent.getFirstName() + " " +
