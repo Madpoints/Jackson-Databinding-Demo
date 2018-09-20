@@ -18,9 +18,23 @@ public class Driver {
 					mapper.readValue(
 							new File("data/sample-full.json"), Student.class)
 ;			
-			System.out.println("Name: " + 
+			System.out.println("Name: \n " + 
 								theStudent.getFirstName() + " " +
 								theStudent.getLastName());
+			
+			Address tempAddress = theStudent.getAddress();
+			
+			System.out.println("Address: \n " + tempAddress.getStreet() + ", " +
+								tempAddress.getCity() + ", " +
+								tempAddress.getState() + ", " +
+								tempAddress.getZip() + ", " +
+								tempAddress.getCountry());
+			
+			System.out.println("Coding Languages: ");
+			
+			for (String language : theStudent.getLanguages()) {
+				System.out.println(" " + language);
+			}
 			
 		}
 		catch(Exception exception) {
